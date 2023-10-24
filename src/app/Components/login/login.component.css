@@ -1,0 +1,19 @@
+#email,#password{
+background-color:transparent;
+border: 0;
+border-radius: 0;
+}
+i{
+background-color: transparent;
+border: 0;
+}
+#input{
+border-bottom: 2px solid rgb(255, 255, 255);
+}
+#form{
+    border: 2px solid #1c8754;
+    background-color: #6ab1f831;
+}
+input::placeholder {
+    color: #ffffff;
+  }

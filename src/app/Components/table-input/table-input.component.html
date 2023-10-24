@@ -1,0 +1,53 @@
+<div id="bg1" class="mb-2 OwnPading">
+<div class="position-absolute top-50 start-50 translate-middle m-auto rounded" id="container">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-8 mx-auto">
+                <input type="text" class="form-control" placeholder="Student Name"name="studentname" [(ngModel)]="studentname" (input)="check()" required />
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-8 mx-auto">
+                <div *ngIf="!flag" class="text-danger">
+                    must more 3
+                   </div>
+            </div>
+             </div>
+        <div class="row mt-1">
+            <div class="col-8 mx-auto">
+                <input type="number" class="form-control" placeholder="Student Age"name="studentage" [(ngModel)]="studentage" (input)="check2()" required />
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div *ngIf="!flag2" class="text-danger">
+                        Must more 18 years!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-5 mx-auto ">
+                <button (click)="addNewList()"class="btn btn-outline-warning">Add Student</button>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div *ngIf="flag3" class="col-6 mx-auto text-danger">
+                {{Alert}}
+            </div>
+        </div>
+
+        <div *ngFor="let st of arr; let i = index" class="row mt-1">
+            <div class="col-4">
+              <p class="bg-secondary p-2 rounded">{{ st.name }}</p>
+            </div>
+            <div class="col-4">
+                <p class="bg-secondary p-2 rounded">{{ st.age }}</p>
+              </div>
+            <div class="col-4">
+              <button class="btn btn-outline-danger" (click)="remove(i)">Remove!</button>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+      

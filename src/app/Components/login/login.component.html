@@ -1,0 +1,54 @@
+<div class="container-fluid py-5" id="bg1">
+<div class="row OwnPading pb-5">
+    <div class="col-4 m-auto">
+ <form class="form m-auto px-4 py-3 rounded" id="form" [formGroup]="LogInForm" (submit)="FnLogin($event)">
+<div class="row text-center text-light p-4 my-3">
+    <h2 class="fw-bolder">Login</h2>
+</div>
+
+<div class="row my-4 p-4">
+    <div class="col mx-auto text-center">
+    <div class="input-group" id="input">
+        <input type="email" class="form-control text-light" placeholder="Username" id="email" formControlName="username">
+        <i class="bi bi-envelope input-group-text text-light"></i>
+      </div>
+</div>
+</div>
+<div class="row mt-4 p-4">
+    <div class="col mx-auto text-center">
+    <div class="input-group" id="input">
+        <input type="password" class="form-control text-light" placeholder="Password" id="password" formControlName="password">
+        <i class="bi bi-lock input-group-text text-light"></i>
+      </div>
+      
+
+</div>
+</div>
+<div class="row px-4">
+    <div class="col mx-auto">
+    <div id="">
+        <input type="checkbox" class="form-check-input me-1" id="dropdownCheck" formControlName="check">
+        <label class="form-check-label text-light" for="dropdownCheck ">Remember me</label>
+      </div>
+</div>
+</div>
+
+<div class="row px-4 my-4">
+    <div class="col mx-auto text-center d-grid">
+       <button type="submit" class="btn btn-light fw-bolder rounded-pill">Log in</button>
+</div>
+</div>
+
+
+
+
+
+ </form>
+ <p *ngIf="getusername.touched&&getusername.errors"  class=" bg-info text-danger text-center bg-opacity-75 fw-bold rounded">Username is not valid</p>
+
+ <p *ngIf="getpassword.touched&&getpassword.errors"  class=" bg-info text-danger text-center bg-opacity-75 fw-bold rounded">password is req.</p>
+ <p *ngIf="mess"  class=" bg-info text-danger text-center bg-opacity-75 fw-bold rounded">User Name or Password is Invalied</p>
+</div>
+</div>
+</div>
+

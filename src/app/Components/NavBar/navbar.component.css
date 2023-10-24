@@ -1,0 +1,28 @@
+nav{
+    margin: 0px;
+    height: 80px;
+    border-bottom: 3px solid #0ec3e8;
+    /* position: sticky; */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-default {
+    background-color: #212529d7;
+    height: 90px;
+    transition: all 0.7s ease;  
+  }
+  .navbar-scrolled {
+    background-color: #212529;
+    transition: all 0.7s ease;
+  }
+i{
+   font-size: 2rem;
+}
+#xx{
+  /* font-family:cursive; */
+  font-family: 'MyFont';
+}
+
+
+  

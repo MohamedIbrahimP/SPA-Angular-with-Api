@@ -1,0 +1,23 @@
+
+    <div class="card bg-dark bg-gradient text-light my-3 mx-auto p-0 col-4 shadow" (mouseenter)="showBtn()" (mouseleave)="showBtn()">
+    <img src="assets/images/{{image}}" class="card-img-top" alt="{{image}}" name="selectedimage">
+    <!-- ----------------------------- -->
+    <div class="btn-group-vertical col-2 position-absolute top-0 end-0 transformed-element shadow rounded bg-dark bg-gradient"[class.visbul]="isButtonVisible" [class.visually-hidden]="!isButtonVisible"  role="group" aria-label="Vertical button group">
+      <button type="button" class="btn text-primary" ><i class="bi bi-eye-fill"></i></button>
+      <button type="button" class="btn text-warning" [routerLink]="['/products',id,'edit']"><i class="bi bi-pencil-square"></i></button>
+      <button type="button" class="btn text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="ShowDel()"><i class="bi bi-trash3-fill"></i></button>
+    </div>      
+     <!-- [routerLink]="['/products', product.id]"   product.id, 'edit' --> 
+    <!-- --------------------------------- -->
+    <div class="card-body text-center">
+      <h5 class="card-title">Name: {{name}}</h5>
+      <h6 class="card-text">Price: {{price}}$</h6>
+      <p class="card-text">{{Quantity}} </p>
+      <a href="#" [ngClass]="{'btn-outline-warning':Quantity=='Only One Product','btn-outline-info disabled':Quantity=='No Product Avaliable','btn-outline-success':Quantity}" class="btn">{{btn}}</a>
+    </div>
+  </div>
+
+
+
+ 
+
